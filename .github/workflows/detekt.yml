@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "**/*.kts?"
+
+jobs:
+  detekt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JDK
+        uses: AdoptOpenJDK/install-jdk@v1
+        with:
+          version: 8
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run ./gradlew --no-daemon detekt
+        run: ./gradlew --no-daemon detekt
+      - name: Run reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for i in **/build/reports/detekt/detekt.xml; do
+            reviewdog -f=checkstyle -name=detekt -reporter=github-check < $i
+          done
