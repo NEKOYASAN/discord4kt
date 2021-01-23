@@ -8,6 +8,7 @@ plugins {
 dependencies {
     commonMainImplementation(kotlin("stdlib"))
     commonMainImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
     commonMainImplementation("io.ktor:ktor-client-core:1.5.0")
     commonTestImplementation(kotlin("test"))
 }
