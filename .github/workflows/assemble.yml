@@ -1,7 +1,4 @@
-on:
-  push:
-    paths:
-      - "**/*.kts?"
+on: [ push ]
 
 jobs:
   assemble:
