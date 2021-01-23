@@ -16,6 +16,7 @@ allprojects {
     }
 
     extensions.configure<DetektExtension>("detekt") {
+        config = files("config/detekt/config.yml")
         reports {
             xml.enabled = true
 
