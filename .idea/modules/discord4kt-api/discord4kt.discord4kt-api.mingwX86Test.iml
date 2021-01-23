@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../discord4kt-api/build/classes/kotlin/mingwX86/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../discord4kt-api/src/mingwX86Test" />
+    <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-io:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-http-cio:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-mingwx86:klib:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.21-2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-mingwx86:klib:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-http:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-metadata:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-metadata:1.4.2-native-mt" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-utils:1.5.0" level="project" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Kotlin/Native 1.4.21-2 - stdlib" level="project" />
+    <orderEntry type="module" module-name="discord4kt.discord4kt-api.commonMain" scope="TEST" />
+    <orderEntry type="module" module-name="discord4kt.discord4kt-api.commonTest" scope="TEST" production-on-test="" />
+    <orderEntry type="module" module-name="discord4kt.discord4kt-api.mingwX86Main" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.21-2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-mingwx86:klib:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-mingwx86:klib:1.0.1" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: io.ktor:ktor-client-core:1.5.0">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-http-cio:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-http:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-metadata:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-utils:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-metadata:1.4.2-native-mt" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.ktor:ktor-io:1.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-metadata:1.0.1" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="discord4kt.discord4kt-api.mingwX86Main" />
+</module>

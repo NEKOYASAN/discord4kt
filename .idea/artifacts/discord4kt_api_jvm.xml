@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="discord4kt-api-jvm">
+    <output-path>$PROJECT_DIR$/discord4kt-api/build/libs</output-path>
+    <root id="archive" name="discord4kt-api-jvm.jar">
+      <element id="module-output" name="discord4kt.discord4kt-api.jvmMain" />
+    </root>
+  </artifact>
+</component>

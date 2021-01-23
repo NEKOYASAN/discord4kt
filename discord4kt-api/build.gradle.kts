@@ -1,15 +1,31 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.apache.tools.ant.taskdefs.condition.Os
 
 plugins {
-    kotlin("jvm") version "1.4.30"
+    kotlin("multiplatform") version "1.4.21-2"
+    kotlin("plugin.serialization") version "1.4.21-2"
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    "commonMainImplementation"("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    "commonMainImplementation"("io.ktor:ktor-client-core:1.5.0")
 }
 
-tasks {
-    withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "1.8"
+kotlin {
+    jvm {
+        compilations.all {
+            kotlinOptions.jvmTarget = "1.8"
+        }
     }
+    js {
+        nodejs()
+    }
+    when {
+        Os.isFamily(Os.FAMILY_WINDOWS) -> {
+            mingwX64()
+        }
+        Os.isFamily(Os.FAMILY_MAC) -> {
+            macosX64()
+        }
+    }
+    linuxX64()
 }
