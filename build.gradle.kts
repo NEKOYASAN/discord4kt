@@ -17,9 +17,22 @@ allprojects {
     }
 
     extensions.configure<DetektExtension>("detekt") {
-        config = files("config/detekt/config.yml")
+        config = this@allprojects.rootProject.files("config/detekt/config.yml")
+        input = files(
+            (file("src").listFiles { file: File -> file.isDirectory } ?: arrayOf<File>())
+                .flatMap {
+                    listOf(
+                        it.resolve("java"),
+                        it.resolve("kotlin")
+                    )
+                }
+        )
         reports {
-            xml.enabled = true
+            xml {
+                enabled = true
+                destination =
+                    this@allprojects.rootProject.file("build/reports/detekt/${this@allprojects.project.name}.xml")
+            }
 
             txt.enabled = false
             html.enabled = false

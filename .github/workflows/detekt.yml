@@ -22,6 +22,6 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          for i in **/build/reports/detekt/detekt.xml; do
+          for i in **/build/reports/detekt/*.xml; do
             reviewdog -f=checkstyle -name=detekt -reporter=github-check < $i
           done
