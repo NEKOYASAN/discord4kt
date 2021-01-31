@@ -16,6 +16,10 @@ allprojects {
         jcenter()
     }
 
+    dependencies {
+        "detektPlugins"("io.gitlab.arturbosch.detekt:detekt-formatting:1.15.0")
+    }
+
     extensions.configure<DetektExtension>("detekt") {
         config = this@allprojects.rootProject.files("config/detekt/config.yml")
         input = files(
