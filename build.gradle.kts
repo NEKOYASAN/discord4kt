@@ -1,7 +1,7 @@
 import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 
 plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.15.0" apply false
+    id("io.gitlab.arturbosch.detekt") version Dependencies.Detekt.version apply false
 }
 
 group = "dev.mirror-kt"
@@ -17,7 +17,7 @@ allprojects {
     }
 
     dependencies {
-        "detektPlugins"("io.gitlab.arturbosch.detekt:detekt-formatting:1.15.0")
+        "detektPlugins"("io.gitlab.arturbosch.detekt:detekt-formatting:${Dependencies.Detekt.version}")
     }
 
     extensions.configure<DetektExtension>("detekt") {

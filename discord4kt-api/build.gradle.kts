@@ -1,15 +1,15 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
 plugins {
-    kotlin("multiplatform") version "1.4.21-2"
-    kotlin("plugin.serialization") version "1.4.21-2"
+    kotlin("multiplatform") version Dependencies.Kotlin.version
+    kotlin("plugin.serialization") version Dependencies.Kotlin.version
 }
 
 dependencies {
     commonMainImplementation(kotlin("stdlib"))
-    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
-    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
-    commonMainImplementation("io.ktor:ktor-client-core:1.5.0")
+    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Dependencies.Serialization.version}")
+    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-datetime:${Dependencies.DateTime.version}")
+    commonMainImplementation("io.ktor:ktor-client-core:${Dependencies.Ktor.version}")
     commonTestImplementation(kotlin("test"))
 }
 
