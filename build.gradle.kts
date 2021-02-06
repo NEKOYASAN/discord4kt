@@ -21,7 +21,7 @@ allprojects {
     }
 
     extensions.configure<DetektExtension>("detekt") {
-        config = this@allprojects.rootProject.files("config/detekt/config.yml")
+        config = rootProject.files("config/detekt/config.yml")
         input = files(
             (file("src").listFiles { file: File -> file.isDirectory } ?: arrayOf<File>())
                 .flatMap {
@@ -35,7 +35,7 @@ allprojects {
             xml {
                 enabled = true
                 destination =
-                    this@allprojects.rootProject.file("build/reports/detekt/${this@allprojects.project.name}.xml")
+                    rootProject.file("build/reports/detekt/${project.name}.xml")
             }
 
             txt.enabled = false
