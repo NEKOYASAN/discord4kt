@@ -13,7 +13,7 @@ jobs:
         with:
           version: 8
       - name: Setup reviewdog
-        uses: reviewdog/action-setup
+        uses: reviewdog/action-setup@v1
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run ./gradlew --no-daemon detekt
@@ -22,6 +22,8 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          for i in **/build/reports/detekt/*.xml; do
-            reviewdog -f=checkstyle -name=detekt -reporter=github-check < $i
-          done
+               shopt -s globstar
+               for i in build/reports/detekt/*.xml; do
+                 echo $i
+                 # reviewdog -f=checkstyle -name=detekt -reporter=github-check < $i
+               done
