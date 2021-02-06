@@ -15,5 +15,5 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-      - name: Run ./gradlew --no-daemon test
-        run: ./gradlew --no-daemon test
+      - name: Run ./gradlew --no-daemon check
+        run: ./gradlew --no-daemon check
